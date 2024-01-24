@@ -1,0 +1,30 @@
+1 React Components là gì? Các cách tạo?
+Components giống như các hàm trả về các phần tử HTML.Các component thực hiện công việc giống như các functions trong 
+- JavaScript nhưng chúng độc lập và nhiệm vụ chính là trả về HTML thông qua hàm render
+- Có 2 loại component là Function Component và Class Component.
+- Và có tính tái sử dụng cao vì chỉ như các function nhỏ và được gọi lại nhiều lần
+
+cách tạo : 
+Khi tạo một React component, tên của component phải bắt đầu bằng một chữ cái viết hoa
+- dùng func hoặc class component
+function Car() {
+  return <h2>Hi, I am also a Car!</h2>;
+}
+  
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+
+2 Cách triển khai State và Props trong Class Component?
+props trong Class Component được xem như giá trị truyển vào cho hàm khởi tạo class. Còn props trong Function Component thì được xem như là giá trị truyền vào hàm pure function khi định nghĩa component.
+
+- Props là 1 từ viết ngắn gọn của properties, và là 1 khái niệm trong ReactJS. Props là 1 đối tượng, nó lưu trữ các giá trị của các attribute (thuộc tính) của một thẻ (Tag). Props cung cấp cách thức để chúng ta truyền dữ liệu từ component này tới component khác. Props được truyền vào component tương tự như cách chúng ta truyền một đối số vào một hàm.
+- Props chỉ dùng để đọc không thay đổi được
+
+3 pure function
+
+hàm không tạo ra bất kỳ ảnh hưởng nào đến các đối tượng khác, chẳng hạn như các request, input, output hoặc data mutation.uôn trả về cùng một kết quả nếu được truyền vào các tham số không đổi. Nó không hề phụ thuộc vào bất kỳ trạng thái hoặc dữ liệu nào, cũng như những sự thay đổi trong khi chương trình đang được chạy. Nó chỉ phụ thuộc vào các tham số đầu vào của nó.
+nó như là 1 cách thiết kế code giúp cho code clean hơn và dễ phát triển và bảo trì và giao tiếp với các lập trình viên khác

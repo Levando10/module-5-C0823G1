@@ -1,0 +1,18 @@
+Là phiên bản tiếp theo của ngôn ngữ Javascript .Phát hành vào 2015 cung cấp một số tinh năng mới bao gồm cải thiện cú pháp khai biến , class  và toán tử mới
+
+Arrow fuction : Arrow function là cú pháp viết hàm trong js sử dụng mũi tên =>
+và không thay thế hoàn toàn cho function bình thường như contructor method cho object 
+
+
+ for each duyệt ko trả về và ko thay đổi dữ liệu
+map duyệt nhuưng có trả về mảng mới và mảng mới thay đổi
+filter duyệt mảng với điều kiện cho trước 
+reduce dùng để tính toán 
+
+spread dùng dạng như để copy 1 mảng qua 1 mảng khác và khi thay đổi thì ko làm thay đổi giá trị của mảng gốc vị trí đặt bất kì trong đối số không nhất thiết phải copy thuộc tính của object và cũng có thể ghi đè của lớp copy
+
+rest Param cho phép biểu diễn 1 số lượng tham số dưới dạng mảng và yêu cầu phải đặt ở cuối param
+
+Destructuring ass là 1 cú pháp  tách dữ liệu được lưu trữ  trong mảng  hoặc object gán cho các biến riêng biệt
+
+let[a,b,c] = arr;  có thể dùng chung với label khi có biên giống bên ngoài như b:x và giá trị default là b = "no image"

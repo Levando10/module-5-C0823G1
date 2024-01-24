@@ -1,0 +1,15 @@
+1 React là một thư viện front-end do Facebook phát triển được sử dụng để xử lý tầng view cho các ứng dụng web và thiết bị di động. ReactJS là một trong những thư viện JavaScript phổ biến nhất và có nền tảng vững chắc cũng như có một cộng đồng lớn, làm việc với React là làm việc với các Component.
+
+2 - Server Side Rendering  nội dung được xử lý ở phía server và trả về trình duyệt triển khai MPA
+  - Client Side Rendering nội dung được xử lý ở phía client triển khai SPA
+
+3  React element
+React element chỉ là một đối tượng JavaScript cũ đơn thuần mà không có các phương thức riêng, là những gì được trả về từ các components. Nó mô tả những gì chúng ta muốn thấy trên màn hình, nó là thành phần đại diện của DOM\
+
+cú pháp  React.createElement(type, [props], [...children])
+children chứa các thẻ HTML khác hoặc có thể là component
+props là các thuộc tính  muốn phần tử đó  có
+type có thể là một thẻ HTML như h1, div hoặc nó có thể là React component
+
+4
+JSX = Javascript + XML  giống như một syntax extension giúp code trở nên dễ đọc hơn có tích hợp react element và html trong js

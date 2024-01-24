@@ -1,0 +1,15 @@
+React component component là block code độc lập  có thể tái sử dụng , mỗi cp có code js,html,css riêng chúng có tihs tía sử dụng dễ đọc dễ viết dễ test
+
+có 2 loại component trong react fuction component và class component : class phải extend component
+
+Props là từ viết tắt của propeties được sử dụng để truyền  data qua lại giữa các component giừa thẻ cha và con
+tìm hiểu về state trong  React Js state là nơi lưu trữ giá trị  của component và có thể thay đối theo thời gian
+Khi state thay đổi thì  component sẽ được render lại (dùng setState) để cập nhập giá trị
+
+1 Pure function  Hàm thuần khiết : hàm luôn trả về 1 kết qủa nếu truyền vào các tham số không đổi hàm không phụ thuộc trạng thái haowcj dữ liệu nào , hàm chỉ phụ thuộc và tham số đầu vào 
+2 Hàm không tạo ra bất kỳ ảnh hưởng nào đén các đối tượng khác ngoài hàm 
+lý do 
++ Không gây ra side-efect
++ Dễ dàng kiểm tra
++ Refactoring code thuận lợi hơn
+ + hạn chế các hàm ảnh hưởng đén nhau
