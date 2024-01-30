@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "book number one",
+      "quantity": 10
+    },
+    {
+      "id": 6,
+      "title": "siêu nhân gao",
+      "quantity": "1"
+    },
+    {
+      "id": 7,
+      "title": "Bảo lê béo lắm",
+      "quantity": "111"
+    },
+    {
+      "id": 8,
+      "title": "Anh giang  víp",
+      "quantity": "11"
+    },
+    {
+      "id": 9,
+      "title": "sách mới",
+      "quantity": "11"
+    },
+    {
+      "id": 10,
+      "title": "hello bé vi",
+      "quantity": "11"
+    }
+  ]
+}

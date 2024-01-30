@@ -1,0 +1,7 @@
+Trong react để tạo form thì có thể sử dụng lại các thành phần của form html như input form kết hợp với các sự kiện như onCHange() , onClick(), để xử lý data trên form
+Validate sử dụng các hàm của js
+ngoài ra có thể sử dụng các thư viện xử lý form và  validate form Formick,Yup, react-form-hook
+
+React Router là thư viện được xây dựng trên react  giúp cho lạp tình viên xây dựng luồng đi - định tuyến cho ứng dụng SPA
+
+Routers được sử dụng để định nghĩa nhiều định tuyến khác nhau , khi người dùng truy cập vào 1 url nhất định nếu url được tìm thấy trong  các url được định nghĩa thì sẽ chuyển hướng đến trang tương ứng + sự thay đổi giá trị url tren màn hình

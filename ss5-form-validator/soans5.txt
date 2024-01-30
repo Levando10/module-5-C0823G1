@@ -1,0 +1,28 @@
+Trình bày cách ReactJS tạo form, xử lý form và triển khai validation cho form?
+để xử lý các sự kiện và trạng thái của form một cách hiệu quả,  thường sẽ sử dụng trạng thái (state) của React.
+Tạo form
+ - Khởi tạo state cho các giá trị của form
+Xử lý form
+- Tạo Form Component
+- Quản lý trạng thái của form
+- Xử lý sự kiện thay đổi trường dữ liệu
+- Xử lý submit form
+Triển khai validation 
+Trong React, Form validation cho phép hiển thị thông báo lỗi nếu người dùng điền không chính xác vào biểu mẫu với loại đầu vào mong đợi.
+Có nhiều cách xác thực các biểu mẫu trong React, tuy nhiên cách ngắn gọn là tạo ra các hàm validation với các quy tắc xác thực
+
+- Triển khai validation có thể dùng các hàm thông thường, sử dụng formik, hoặc thư viện của yup (validateSchema)
+- Tạo 1 state để theo dõi lỗi của trường 
+- Tạo 1 hàm để kiểm tra và trả về lỗi 
+- Tạo 1 hàm và gọi lại hàm kiểm tra để kiểm tra lỗi và cập nhật state theo dõi lỗi
+React-Router là gì ?
+
+Là một thư viện định tuyến(routing) tiêu chuẩn trong React. Định tuyến là điều hướng người dùng giữa các thành phần khác nhau mà không làm load lại trang.
+//Giúp thao tác với các routing trong react dễ dàng
+* React-Router là một thư viện định tuyến (routing) tiêu chuẩn trong React. Nó giữ cho giao diện của ứng dụng đồng bộ với URL trên trình duyệt. React-Router cho phép bạn định tuyến “luồng dữ liệu” (data flow) trong ứng dụng của bạn một cách rõ ràng. Nó tương đương với sự khẳng định, nếu bạn có URL này, nó sẽ tương đương với Route này, và giao diện tương ứng.
+Cách triển khai
+- cài đặt router npm i react-router-dom
+- Sử dụng BrowserRouter vs HashRouter
+- Định nghĩa các route
+- sử dụng cặp thẻ <Link></Link> để chuyển hướngg
+- Có thể sử dụng Nested Route, Index Route, và truyền tham số search Params

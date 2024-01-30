@@ -1,0 +1,44 @@
+ss4
+Usereffect đều chạy ở giai đoạn mouting đếu được chạy
+useeffect sử lý side efect là sử lý phụ cho nên nó sẽ chạy sau cái hàm return là luôn giao diện  chính hàm render ra Ui
+
+UseEffect ngoài chạy mouting ra còn chạy ở giai đoạn updating (Khi thay đổi prop state là nó đều chạy qua)
+Usereffect,[] Chạy ở giai đoạn mouting thôi ko chạy giai đoạn updating khi updating cái state thì nó ko ảnh hưởng
+Usereffect,[deps] sẽ chạy ở giai đoạn mouting rồi đồng thời sẽ chạy ở giai đoạn updating nếu depens có thay đổi thì chổ đó là chúng ta sẽ khia báo những state hoặc prop có sự thay đổi là hàm đó được chạy
+
+cleanup sử lý trong trường hợp dọn dẹp bộ nhớ chống memory leak sử lý và hắn chạy ở giai đoạn unmout
+
+
+Hook được sử dụng để khắc phục sử dụng state và lifecycle
+bên class muốn upd thì thông qua this.setState()
+bên func muốn upd thì thông qua tên pthuc là set...
+code gọi về api để lấy list thì nằm ở giai đoạn mounting
+vì sao useEffect lại chạy cuối cùng - xử lý bên cạnh effect tránh rủi ro
+khi mà gọi api và lấy dữ liệu lên lâu
+- hooks - là bao gồm những tính năng mới trong react phiên bản 16.8, là những hàm đặc biệt được react tạo sẵn và cho phép kết nối react state và lifecycle vào trong func component
+- lợi ích :
+	+ khiến các component trở nên gọn hơn
+	+ giảm đáng kể số lượng, dễ tiếp cận
+	+ không cần kiến thức về oop
+- Một số hooks hay dùng :
+ 	+ useState: quản lý trạng thái
+	+ useEffect: liên quan tới xử lý lifecycle
+	+ useLayoutEffect : giống effect nhưng chỉ xử ly 1 số trh đặc biệt
+	+ useContext
+	+ useReducer
+	+ useMemo
+	+ useCallback
+	+ có thể tự tạo hook riêng
+- useState hook - cho phép thêm/lưu trữ state tới react func component
++ cú pháp : const[useName,setUseName] = useState('init value') hoặc ("")
+- useEffect hook - cho phép xử lý các logic trong vòng đời của component
+và side effect
+các trường hợp hay sử dụng - gặp :
++ useEffect(callback) - chạy giai đoại mounting và upd
+				chạy sau hàm return
++ useEffect(callback,[]) -chạy cho giai đoạn mounting
++ useEffect((),[..]) - chạy giai đoạn mounting và
+		chạy tiếp ở giai đoạn upd nếu despendency(state hoặc props)
+		có thay đổi
+cleanup func chạy trong 3 trh, sử dụng khi muốn dọn dẹp bộ nhớ -
+ chạy ở giai đoạn unmounting

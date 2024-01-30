@@ -1,0 +1,35 @@
+ - Giới thiệu tổng quan về react
+ReactJs là thư viện javascript tạo ra các thành phần giao diện người dùng có tính tái sử dụng.ReactJs được phát triển bởi facebook thường được sử dụng cho các ứng dụng single page application
+
+seo search eginering
+
+ssr - mpa
+
+ssr
+xử lí dữ lieuj ở server và server trả về nguyên cái cục html cho người dùng
+
+csr 
+ xử lý dữ liệu ở phía client như 
+
+
+React element là gì 
+React element là 1 phần tử giúp xây dựng Ui trong react
+khi render luôn trả về react  element 1 ddooosi tượng element
+React.createElement(type,props,...children)
+
+ Hoặc Jsx
+
+
+Jsx = javasctipt + xml
+Jsx là 1 ngôn ngữ kết hợp giữa Js và các thẻ giống Html để xác định các phần tử giao diện người dùng 
+- so sánh React.createElement
+
+<div> <div> bố trí dưới dạng node nên thường bọc trong thẻ div
+yêu cầu phải có thẻ đóng 
+và viết theo dạng camelCase để cho react hiểu
+chú ý các cặp thẻ của html
+
+bản chất của react elemtn là 1 object nó là thành phần của dom  (type,props,)
+
+
+
