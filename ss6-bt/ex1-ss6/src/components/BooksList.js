@@ -2,17 +2,31 @@ import {useEffect, useState} from "react";
 import * as bookService from "../service/BooksService"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-import {findById} from "../service/BooksService";
-import {FormCreate} from "./BooksCreate";
 import {useNavigate} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
 export function BooksList() {
+    const [bookToDelete, setBookToDelete] = useState(null);
+
+    const handleShow = (bookId) => {
+        setBookToDelete(bookId);
+    };
+
+    const handleClose = () => {
+        setBookToDelete(null);
+    };
+
+    const [show, setShow] = useState(false);
+
+
+
     const navigate = useNavigate();
 
     const [books,setBooks] = useState([]);
-    const [editingBook, setEditingBook] = useState(null);
     const handleDelete = async (bookId) => {
+        console.log(bookId)
         try {
             await  bookService.deleteBook(bookId);
             const result = await bookService.findAll();
@@ -22,12 +36,14 @@ export function BooksList() {
         }
 
     }
+
+
     const handleEdit = async (bookId) => {
 
         try {
            const book =  await  bookService.findById(bookId);
-            setEditingBook(book);
-            navigate("/edit-book" , {state:{id:book.id,title:book.title,quantity:book.quantity}})
+            // navigate("/edit-book" , {state:{id:book.id,title:book.title,quantity:book.quantity}})
+            navigate("/edit-book",{state:{book:book}})
 
         } catch (e) {
             console.log(e)
@@ -76,18 +92,36 @@ export function BooksList() {
                                     >
                                         Edit
                                     </button>
-                                    <button
-                                        className={'btn btn-dark'}
-                                        onClick={() => handleDelete(book.id)}
-                                    >
+
+                                    <Button variant="danger" onClick={() => handleShow(book.id)}>
                                         Delete
-                                    </button>
+                                    </Button>
+                                    <Modal show={bookToDelete === book.id} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Modal heading</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>you want to delete this {book.title} </Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose}>
+                                                Close
+                                            </Button>
+                                            <Button variant="primary" onClick={() => handleDelete(book.id)}>
+                                                Delete
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
+
+
+
+
                                 </td>
 
                             </tr>
                         ) )}
                     </tbody>
                 </table>
+
+
 
         </>
     )

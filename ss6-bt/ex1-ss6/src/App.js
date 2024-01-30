@@ -8,8 +8,6 @@ import {BookEdit} from "./components/BookEdit";
 
 
 function App() {
-    const yourId = "yourIdValue";
-    const yourTitle = "yourTitleValue";
   return (
    <>
        <NavLink className={'btn btn-dark'}  to={'/'}>home</NavLink> <br></br>
@@ -21,7 +19,7 @@ function App() {
        <Routes>
            <Route path={'/'} element={<BooksList />}> </Route>
            <Route path={'create'} element={<FormCreate />}> </Route>
-           <Route path={'edit-book'} element={<BookEdit id={yourId} title={yourTitle} />}> </Route>
+           <Route path={'edit-book'} element={<BookEdit />}> </Route>
 
        </Routes>
        <ToastContainer/>

@@ -1,0 +1,26 @@
+1 Redux là gì? Tại sao phải sử dụng redux?
+Redux là một thư viện để quản lí state của ứng dụng  là để quản lý trạng thái của ứng dụng một cách hiệu quả
++ Có thể dự đoán trạng thái (State Predictability)
++ Khả năng bảo trì (Maintainability)
++ Gỡ lỗi dễ dàng (Debugging)
++ Lợi ích về hiệu suất (Performance)
+React Redux thực hiện nhiều tối ưu hóa hiệu suất bên trong để thành phần được kết nối của riêng bạn chỉ hiển thị khi thực sự cần.
++ Dễ dàng kiểm thử (Ease of testing) 
++ Cộng đồng và hệ sinh thái (Community and ecosystem)
+2 Các thành phần chính của redux? Flow hoạt động của redux?
+
+3 Giải thích chức năng của các thành phần bên dưới:
+Redux Actions
+Redux Reducer
+Redux Store
+Redux Middleware
+
+- Action là một đối tượng JavaScript thuần túy và phải có thuộc tính type để chỉ ra loại hành động được thực hiện. Nó cho chúng ta biết những gì sẽ xảy ra. Các type phải được định nghĩa là hằng số chuỗi trong ứng dụng
+- Action Creators
+Action Creators là các function dùng để tạo một đối tượng action. Các hàm này chỉ đơn giản trả về một đối tượng JS thuần túy là một action.
+- Redux store cung cấp một phương thức có tên là dispatch. Cách duy nhất để cập nhật giá trị của state là gọi store.dispatch() và truyền một đối tượng action. Store sẽ chạy function reducer và lưu giá trị state mới bên trong.
+- Middleware là một lớp trung gian giữa action được gửi và reducer xử lý action.
+Middleware cho phép mở rộng chức năng của Redux, như ghi log, xử lý side effects, thậm chí là thay đổi action trước khi nó đến reducer.
+Thực hiện các công việc như xử lý bất đồng bộ, thêm thông tin vào action, hoặc thậm chí thay đổi trạng thái dựa trên action.
+
+

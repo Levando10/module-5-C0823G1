@@ -19,7 +19,6 @@ export function FormCreate() {
                 quantity: Yup.number('Nhập số').min(0).required("Bắt buộc nhập không được để trống")
             })}
                     onSubmit={(values,{setSubmitting}) =>{
-                        console.log(values)
                         const createBook = async (values) => {
                             setSubmitting(false)
                             await bookService.save(values)

@@ -1,0 +1,28 @@
+1 Sync and Async :
+ - Sync(Đồng bộ) : các công việc thực hiện một cách tuần tự công việc này xong thì mới thực hiện công việc khác , ví dụ a và b thì a thực hiện xong thì moiws tới lượt b thực hiện => ảnh hưởng đến trải nghiệm người dùng 
+- Async(Bất đồng bộ) : Với cách xử lý bất đồng bộ  thì A đang thực hiện chương trình vẫn có thể  thực hiện B mà không cần đợi A hoàn thành
+
+2 Sử dụng promise để xử lý bất đồng bộ
+ - Client ->server
+
+Promise sinh ra để xử  lý kết quả của 1 hành động cụ thể, kết quả của mỗi hành động là thành công hoặc thất bại
+và promise giúp giải quyết vấn đề về thất bại làm gì thành công làm gì
+Trạng thái
+
+	+ Pending : hành động đnag chờ xử lý hoặc bị từ chối (nhiều request liên tục ...)
+	+ Fulfilled : hành động xử lý xong và thành công
+	+ Rejected : hành động xử lý xong và thất bại
+ 3 Giới thiệu Axios là thư viện HTTP Client  dựa trên promise cơ bản thì cung cấp 1 Api cho việc xử lý XHR (XML.httpRequest)
+  	+ Tạo XMLHttpRequest từ trình duyệt
+	+ Thực hiện các Http request từ nodejs
+	+ hỗ trợ promise api
+	+ chuyển đổi request,respone
+	+ xử lý tiền kì, hậu kì của respone
+	+ cancel request
+ 4 Khái niệm về Async/Await : là cơ chế thwucj hiện các thao tác bất đồng bộ một cách tuần tự
+Async/await vẫn sử dụng promise nhưng mà mã nguồn  trong sáng vầ dễ theo dõi hơn
+	+ tự động biến đổi hàm thông thường thành 1 hàm promise
+	+ khi gọi tới hàm async sẽ xử lý mọi thứ và trả về kết quả trong hàm nó 
+ 	+ async cho phép xử dụng await
+	+ khi đặt await trước 1 promise sẽ đợi cho đến khi promise kết thúc và trả về kết quả
+	+ await chỉ sử dugnj bên trong function async

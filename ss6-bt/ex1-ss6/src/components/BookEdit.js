@@ -6,36 +6,35 @@ import * as Yup from 'yup'
 import { Audio } from 'react-loader-spinner'
 import * as bookService from "../service/BooksService"
 import {useLocation, useNavigate} from "react-router-dom";
-import {useEffect} from "react";
 
 export function BookEdit() {
     const navigate = useNavigate();
     const  location = useLocation();
-    const { id, title,quantity } = location.state || {};
-    useEffect(() => {
+    // const { id, title,quantity } = location.state ;
+    const data = location.state
+    console.log(data.book.id)
 
-        const { id, title,quantity } = location.state || {};
-    }, [location.state]);
 
     return(
         <>
             <Formik initialValues={{
-                id:`${id}`,
-                title:`${title}`,
-                quantity:`${quantity}`
+                id:`${data.book.id}`,
+                title:`${data.book.title}`,
+                quantity:`${data.book.quantity}`
             }} validationSchema={Yup.object({
                 title: Yup.string().required("Bắt buộc nhập không được để trống"),
                 quantity: Yup.number('Nhập số').min(0).required("Bắt buộc nhập không được để trống")
             })}
                     onSubmit={(values,{setSubmitting}) =>{
-                        const createBook = async (values) => {
+                        const editBook = async (values) => {
 
                             setSubmitting(false)
                             await bookService.save(values)
-                            toast(`Book add success`)
+                            toast(`Book edit success`)
                             navigate("/")
                         }
-                        createBook(values);
+                        console.log(values)
+                        editBook(values);
                     } }>
                 {
                     ({isSubmitting}) => (
@@ -59,11 +58,14 @@ export function BookEdit() {
                         </Form>
                     )
                 }
-
-
             </Formik>
 
         </>
     )
 
 }
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
+        integrity="sha512-MY2jfK3DBnVzdS2V8MXo5lRtr0mNRroUI9hoLVv2/yL3vrJTam3VzASuKQ96fLEpyYIT4a8o7YgtUs5lPjiLVQ=="
+        crossOrigin="anonymous"
+        referrerpolicy="no-referrer"></script>
